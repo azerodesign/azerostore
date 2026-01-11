@@ -1,0 +1,328 @@
+.settings-page {
+    min-height: 100vh;
+    padding: 100px 24px 100px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.settings-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.settings-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0066FF 0%, #00A3FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+[data-theme="dark"] .settings-header h1 {
+    background: linear-gradient(135deg, #fff 0%, #B4C5D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.settings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    opacity: 0.8;
+}
+
+.settings-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+[data-theme="light"] .settings-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.setting-item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.setting-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #0066FF;
+}
+
+[data-theme="dark"] .setting-icon {
+    background: rgba(0, 102, 255, 0.2);
+    color: #60A5FA;
+}
+
+.setting-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.setting-info p {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.setting-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 20px;
+}
+
+[data-theme="light"] .setting-line {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.toggle-btn:first-child {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+.toggle-btn:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+[data-theme="light"] .toggle-btn {
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #555;
+}
+
+[data-theme="dark"] .toggle-btn {
+    color: #aaa;
+}
+
+.toggle-btn.active {
+    background: #0066FF;
+    color: white;
+    border-color: #0066FF;
+}
+
+/* Select Control */
+.setting-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+[data-theme="light"] .setting-select {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Secret Card */
+.secret-card {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.secret-card.unlocked {
+    border-color: #0066FF !important;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.15) !important;
+}
+
+.secret-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-icon {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.secret-content {
+    overflow: hidden;
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #0066FF, #00A3FF);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.premium-desc {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.premium-features {
+    list-style: none;
+    margin: 0 0 20px;
+}
+
+.premium-features li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.app-version {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.4;
+    margin-top: 20px;
+}
+
+/* Secret Menu List */
+.secret-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+}
+
+.secret-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(0, 102, 255, 0.05);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secret-menu-item:hover {
+    background: rgba(0, 102, 255, 0.1);
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateX(4px);
+}
+
+[data-theme="dark"] .secret-menu-item {
+    background: rgba(0, 102, 255, 0.1);
+    border-color: rgba(0, 163, 255, 0.15);
+}
+
+[data-theme="dark"] .secret-menu-item:hover {
+    background: rgba(0, 102, 255, 0.15);
+    border-color: rgba(0, 163, 255, 0.3);
+}
+
+.secret-menu-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 10px;
+}
+
+[data-theme="dark"] .secret-menu-icon {
+    background: rgba(0, 163, 255, 0.15);
+}
+
+.secret-menu-info {
+    flex: 1;
+}
+
+.secret-menu-info h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+}
+
+[data-theme="dark"] .secret-menu-info h4 {
+    color: #fff;
+}
+
+[data-theme="light"] .secret-menu-info h4 {
+    color: #1a1a2e;
+}
+
+.secret-menu-info p {
+    font-size: 12px;
+    margin: 0;
+    opacity: 0.6;
+}
+
+.secret-menu-arrow {
+    font-size: 18px;
+    opacity: 0.4;
+    transition: all 0.2s ease;
+}
+
+.secret-menu-item:hover .secret-menu-arrow {
+    opacity: 1;
+    color: #0066FF;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: #FF5252;
+    background: rgba(255, 82, 82, 0.1);
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+[data-theme="dark"] .coming-soon-badge {
+    color: #FF8A80;
+    background: rgba(255, 138, 128, 0.15);
+}

@@ -1,0 +1,24 @@
+/* 
+  Paste your @font-face definitions here. 
+  Example for a local font file in public/fonts:
+*/
+
+/* 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyFont-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* For now, we use a clean Google Font as a placeholder for "Luxury Tech" */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+}
