@@ -53,10 +53,19 @@ body::after {
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: none;
   z-index: -1;
   animation: floatOrb 15s infinite alternate;
   pointer-events: none;
+}
+
+/* Disable heavy animations on mobile for better performance */
+@media (max-width: 768px) {
+
+  body::before,
+  body::after {
+    display: none;
+  }
 }
 
 [data-theme="dark"] body::before {

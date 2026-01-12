@@ -1,5 +1,5 @@
 .dashboard {
-   padding-bottom: 80px;
+   padding-bottom: 120px;
    padding-top: 100px;
    /* Space for bottom nav & top navbar */
    max-width: 1200px;
@@ -167,7 +167,7 @@
    height: 80px;
    margin-bottom: 12px;
    align-self: center;
-   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+   filter: none;
    transition: transform 0.3s ease;
    display: flex;
    align-items: center;
@@ -267,7 +267,6 @@
    text-align: center;
    padding: 40px;
    color: var(--text-secondary);
-   background: rgba(255, 255, 255, 0.05);
+   background: rgba(255, 255, 255, 0.08);
    border-radius: 16px;
-   backdrop-filter: blur(10px);
 }

@@ -139,16 +139,6 @@ const Settings = () => {
 
                 <section>
                     <p className="app-version">Versi Aplikasi 2.0.1 (Blue Edition)</p>
-                    <button
-                        onClick={async () => {
-                            const { migrateData } = await import('../utils/migrateData');
-                            const result = await migrateData();
-                            alert(result.success ? 'Migration Success!' : 'Migration Failed');
-                        }}
-                        style={{ marginTop: '20px', padding: '10px', background: '#333', color: '#fff', border: 'none', borderRadius: '8px', cursor: 'pointer', opacity: 0.5 }}
-                    >
-                        Migrate Data to Supabase
-                    </button>
                 </section>
             </div>
         </div>

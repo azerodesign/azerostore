@@ -2,9 +2,7 @@
 .bottom-sheet-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    /* Heavy blur as requested */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2000;
     display: flex;
     justify-content: center;
@@ -66,7 +64,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    backdrop-filter: blur(4px);
     transition: background 0.2s;
 }
 
@@ -113,7 +110,6 @@
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

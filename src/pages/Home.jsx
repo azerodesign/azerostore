@@ -6,6 +6,7 @@ import AnimatedContainer from '../components/AnimatedContainer';
 import GlassmorphCard from '../components/GlassmorphCard';
 import BentoGrid from '../components/BentoGrid';
 import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 import './Home.css';
 
 const Home = () => {
@@ -184,6 +185,9 @@ const Home = () => {
 
             {/* Testimonials */}
             <Testimonials />
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 };

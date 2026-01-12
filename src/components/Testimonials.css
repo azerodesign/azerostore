@@ -76,9 +76,7 @@
 .testimonial-card {
     flex-shrink: 0;
     width: 260px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 16px;
@@ -274,6 +272,7 @@
 
     .testimonials-track {
         animation-duration: 8s;
+        /* Faster on mobile */
     }
 
     .testimonials-cta {
@@ -287,5 +286,14 @@
     .cta-btn {
         padding: 10px 20px;
         font-size: 13px;
+    }
+
+    .testimonial-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    [data-theme="dark"] .testimonial-card {
+        background: rgba(30, 40, 55, 0.9);
     }
 }

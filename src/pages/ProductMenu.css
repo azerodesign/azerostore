@@ -14,8 +14,7 @@
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     cursor: pointer;
@@ -49,7 +48,7 @@
     width: 80px;
     height: 80px;
     margin-bottom: 16px;
-    filter: drop-shadow(0 0 30px rgba(0, 102, 255, 0.4));
+    filter: none;
     animation: floatLogo 6s ease-in-out infinite;
 }
 
@@ -101,9 +100,7 @@
 
 /* Glassmorphism Cards Override */
 .package-card {
-    background: rgba(255, 255, 255, 0.02) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
     border-radius: 20px !important;
@@ -264,7 +261,7 @@
 }
 
 .feature-list li svg {
-    filter: drop-shadow(0 0 8px rgba(0, 163, 255, 0.5));
+    filter: none;
 }
 
 .order-btn {
@@ -305,4 +302,16 @@
 .order-btn:hover {
     box-shadow: 0 8px 30px rgba(0, 102, 255, 0.6);
     transform: translateY(-2px);
+}
+
+/* Mobile Performance Optimization */
+@media (max-width: 768px) {
+    .product-logo svg {
+        animation: none;
+    }
+
+    .order-btn::before {
+        display: none;
+        /* Disable shine animation */
+    }
 }

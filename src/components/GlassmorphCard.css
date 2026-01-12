@@ -1,114 +1,62 @@
 .glassmorphcard {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
     padding: 28px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Gradient Border Glow Effect */
+/* Disabled: Gradient Border Glow Effect - too heavy */
 .glassmorphcard::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 163, 255, 0.1) 50%, transparent 100%);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
+    display: none;
 }
 
-.glassmorphcard:hover::after {
-    opacity: 1;
-}
-
-/* Shine Effect */
+/* Disabled: Shine Effect - too heavy */
 .glassmorphcard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.08),
-            transparent);
-    transition: 0.6s ease;
-    pointer-events: none;
-    z-index: 2;
+    display: none;
 }
 
-.glassmorphcard:hover::before {
-    left: 100%;
-}
-
-/* Light Theme */
+/* Light Theme - simplified */
 [data-theme="light"] .glassmorphcard {
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow:
-        0 4px 24px rgba(0, 0, 0, 0.04),
-        0 1px 2px rgba(0, 0, 0, 0.02);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Dark Theme */
+/* Dark Theme - simplified */
 [data-theme="dark"] .glassmorphcard {
-    background: linear-gradient(145deg, rgba(20, 30, 48, 0.7) 0%, rgba(17, 23, 35, 0.8) 100%);
+    background: rgba(25, 35, 50, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover States */
-/* Hover States - Enhanced */
+/* Hover States - simplified */
 .glassmorphcard:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .glassmorphcard:hover .service-icon,
 .glassmorphcard:hover .card-icon {
-    transform: translateY(-6px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .glassmorphcard:hover h3 {
-    transform: translateX(4px);
-    background: linear-gradient(135deg, #0066FF 0%, #00A3FF 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0066FF;
 }
 
 [data-theme="dark"] .glassmorphcard:hover {
-    background: linear-gradient(145deg, rgba(30, 45, 70, 0.8) 0%, rgba(20, 30, 50, 0.9) 100%);
-    border-color: rgba(0, 163, 255, 0.5);
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.5),
-        0 0 40px rgba(0, 163, 255, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: rgba(30, 45, 60, 0.95);
+    border-color: rgba(0, 163, 255, 0.3);
 }
 
 [data-theme="light"] .glassmorphcard:hover {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow:
-        0 20px 40px rgba(0, 102, 255, 0.15),
-        0 8px 16px rgba(0, 0, 0, 0.05),
-        0 0 20px rgba(0, 102, 255, 0.1);
-    border-color: rgba(0, 102, 255, 0.3);
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(0, 102, 255, 0.2);
 }
 
 /* Icon Container Inside Card */
@@ -164,5 +112,28 @@
 
     100% {
         background-position: 200% 200%;
+    }
+}
+
+/* Mobile Performance Optimization */
+@media (max-width: 768px) {
+    .glassmorphcard {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    /* Disable shimmer animation on mobile */
+    .glassmorphcard .service-icon::before,
+    .glassmorphcard .card-icon::before {
+        animation: none;
+        background: none;
+    }
+
+    [data-theme="light"] .glassmorphcard {
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    [data-theme="dark"] .glassmorphcard {
+        background: rgba(20, 30, 48, 0.9);
     }
 }

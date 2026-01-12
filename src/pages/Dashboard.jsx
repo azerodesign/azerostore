@@ -10,6 +10,7 @@ import AnimatedContainer from '../components/AnimatedContainer';
 import { categories, products } from '../data/products';
 import ProductIcon from '../components/ProductIcon';
 import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 import { supabase } from '../lib/supabaseClient';
 import './Dashboard.css';
 
@@ -139,7 +140,7 @@ const Dashboard = () => {
                         title="Unleash Your Potential"
                         description="Discover premium assets to elevate your creative projects."
                         buttonText="Exploring Now"
-                        onButtonClick={() => navigate('/all-products')}
+                        onButtonClick={() => navigate('/category/apk-premium')}
                         icon="🚀"
                     />
                 </AnimatedContainer>
@@ -287,6 +288,9 @@ const Dashboard = () => {
                 onClose={() => setIsModalOpen(false)}
                 product={selectedProduct}
             />
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 };
