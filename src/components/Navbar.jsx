@@ -11,7 +11,7 @@ const Navbar = () => {
     const navItems = [
         {
             id: 'home',
-            label: 'Home',
+            label: 'Dashboard',
             path: '/dashboard',
             icon: (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <div className="brand-logo">
                         <div className="logo-circle-bg"></div>
                         <img
-                            src="https://i.postimg.cc/25rTMbJX/Group-1.png"
+                            src="https://files.catbox.moe/2agxs1.png"
                             alt="Azerostore Logo"
                             className="logo-img"
                         />

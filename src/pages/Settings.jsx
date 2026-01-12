@@ -122,10 +122,10 @@ const Settings = () => {
                                             </div>
                                             <span className="secret-menu-arrow">→</span>
                                         </div>
-                                        <div className="secret-menu-item" onClick={(e) => e.stopPropagation()}>
+                                        <div className="secret-menu-item" onClick={(e) => { e.stopPropagation(); window.location.href = '/azeropanel'; }}>
                                             <span className="secret-menu-icon">🎛️</span>
                                             <div className="secret-menu-info">
-                                                <h4>AzeroPanel <span className="coming-soon-badge">(Coming Soon)</span></h4>
+                                                <h4>AzeroPanel <span className="admin-only-badge">ONLY OWNER/ADMIN</span></h4>
                                                 <p>Dashboard kontrol premium</p>
                                             </div>
                                             <span className="secret-menu-arrow">→</span>

@@ -16,6 +16,15 @@ html {
   --primary-blue: #0066FF;
   --secondary-blue: #00A3FF;
   --dark-blue: #0A0F16;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+}
+
+[data-theme="light"] {
+  --text-primary: #1a1a2e;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
 }
 
 body {
